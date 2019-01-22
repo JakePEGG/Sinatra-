@@ -1,7 +1,23 @@
-<h1> My name is <%= @random_name %>
-<div>
-<style>
-img { border: dashed red;}
-</style>
-<img src='http://bit.ly/1eze8aE'>
-</div>
+<html>
+  <head>
+      <title> Jakes Local Webpage! </title>
+  </head>
+
+  <body>
+  <h1> My name is <%= @random_name %>
+    <div>
+      <style>
+        img { border: dashed red;}
+      </style>
+    </div>
+<form action="/named-cat">
+  <input type="text" name=name>
+  </input>
+</form>
+
+
+  <img src='http://bit.ly/1eze8aE'>
+
+
+</body>
+</html>
