@@ -4,15 +4,18 @@
   </head>
 
   <body>
+    <% if @random_name %>
   <h1> My name is <%= @random_name %>
+  <% end %>
     <div>
       <style>
         img { border: dashed red;}
       </style>
     </div>
+
 <form action="/named-cat">
   <input type="text" name=name>
-  </input>
+  <input type="submit" value="submit">
 </form>
 
 
