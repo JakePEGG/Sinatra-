@@ -2,6 +2,7 @@ require 'sinatra/base'
 require 'shotgun'
 
 class Battle < Sinatra::Base
+  set :session_secret, 'secret AF'
   enable  :sessions
   get '/' do
     # 'Hello Battle!'
