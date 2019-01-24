@@ -3,9 +3,8 @@ require 'shotgun'
 
 class Battle < Sinatra::Base
   set :session_secret, 'secret AF'
-  enable  :sessions
+  enable :sessions
   get '/' do
-    # 'Hello Battle!'
     erb :index
   end
 
