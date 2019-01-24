@@ -13,10 +13,18 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
+    session[:damage] ||= 0
+    session[:health] = 100 - session[:damage]
     erb :play
   end
 
+  post '/attack' do
+    session[:damage] += 10
+    redirect '/play'
+  end
+
   post '/names' do
+  session.clear
   session[:player_1_name] = params[:player_1_name]
   session[:player_2_name] = params[:player_2_name]
   redirect '/play'

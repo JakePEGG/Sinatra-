@@ -11,3 +11,11 @@ feature 'See opponents health' do
     expect(page).to have_content 'Mittens 100 HP'
   end
 end
+
+feature 'attacks enemy' do
+  scenario 'iterates health down from original hp' do
+    sign_in_and_play
+    click_button 'attack' 
+    expect(page).to have_content 'Mittens 90 HP'
+  end
+end
